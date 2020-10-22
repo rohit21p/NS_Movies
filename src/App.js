@@ -28,9 +28,8 @@ export default function App() {
   return (
     <Grid container>
       {Object.keys(movies).map((key) => (
-        <Grid item>
+        <Grid item key={key}>
           <Movie
-            key={key}
             id={key}
             movie={movies[key]}
             handleDelete={handleDelete}
